@@ -1,38 +1,33 @@
-import { ArrowUpRight, BarChart3, Bot, PieChart, TrendingUp } from "lucide-react";
+import { ArrowUpRight, BarChart3, Bot, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    icon: BarChart3,
-    title: "Dashboard de Vendas",
-    description: "Dashboard interativo com métricas de performance, tendências de mercado e insights acionáveis para tomada de decisão estratégica.",
-    tags: ["Power BI", "Python", "SQL"],
-    color: "from-primary to-cyan-400",
-    link: "#",
-  },
-  {
-    icon: TrendingUp,
-    title: "Análise de Inadimplência",
-    description: "Modelo preditivo utilizando Machine Learning para identificar clientes com maior risco de inadimplência, reduzindo perdas em 30%.",
-    tags: ["Python", "Scikit-learn", "Pandas"],
-    color: "from-accent to-purple-400",
-    link: "#",
-  },
-  {
     icon: Bot,
-    title: "Chatbot Analítico",
-    description: "Assistente inteligente que analisa planilhas automaticamente e responde perguntas sobre os dados em linguagem natural.",
-    tags: ["Python", "NLP", "API"],
-    color: "from-emerald-500 to-teal-400",
-    link: "#",
+    title: "Chatbot Analista de Planilhas",
+    description: "Aplicação web com chatbot inteligente que analisa planilhas e responde perguntas em linguagem natural. Automação de análise de dados focada em experiência do usuário.",
+    tags: ["Python", "NLP", "IA", "UX"],
+    color: "from-accent to-primary",
+    link: "https://plani-bot-magic.vercel.app/",
+    highlight: "Automação de análise de dados",
   },
   {
-    icon: PieChart,
-    title: "EDA de Churn",
-    description: "Análise exploratória completa para entender padrões de cancelamento de clientes, identificando fatores-chave de retenção.",
-    tags: ["Python", "Plotly", "Pandas"],
-    color: "from-orange-500 to-amber-400",
-    link: "#",
+    icon: BarChart3,
+    title: "Dashboard de Análise de Dados",
+    description: "Dashboard interativo com dados tratados, métricas e visualizações para tomada de decisão. KPIs claros e insights acionáveis para gestão estratégica.",
+    tags: ["Dashboard", "Métricas", "KPIs", "Visualização"],
+    color: "from-primary to-secondary",
+    link: "https://call-stats-board.lovable.app",
+    highlight: "Insights acionáveis",
+  },
+  {
+    icon: Github,
+    title: "Repositórios e Projetos de Dados",
+    description: "Coleção de projetos de análise de dados, exploração de dados (EDA), modelos de machine learning básico e visualizações em Python.",
+    tags: ["Python", "Pandas", "ML", "EDA"],
+    color: "from-secondary to-accent",
+    link: "https://github.com/go830305-cripto",
+    highlight: "Machine Learning & EDA",
   },
 ];
 
@@ -42,7 +37,8 @@ export function Projects() {
       {/* Background */}
       <div className="absolute inset-0 bg-hero-gradient" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container relative z-10 px-4">
         <div className="max-w-6xl mx-auto">
@@ -55,12 +51,12 @@ export function Projects() {
               <span className="gradient-text">Projetos em Destaque</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Cada projeto representa uma solução única para desafios reais de negócio.
+              Aplicações reais que transformam dados em decisões estratégicas.
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <article
                 key={project.title}
@@ -69,8 +65,14 @@ export function Projects() {
               >
                 {/* Icon */}
                 <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} shadow-lg`}>
-                  <project.icon className="h-7 w-7 text-white" />
+                  <project.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
+
+                {/* Highlight Badge */}
+                <span className="inline-flex w-fit items-center rounded-full bg-accent/10 border border-accent/30 px-3 py-1 text-xs font-medium text-accent mb-4">
+                  <Sparkles className="h-3 w-3 mr-1" />
+                  {project.highlight}
+                </span>
 
                 {/* Content */}
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -85,7 +87,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground"
+                      className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -94,7 +96,7 @@ export function Projects() {
 
                 {/* Link */}
                 <Button variant="ghost" className="w-fit group/btn" asChild>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
                     Ver Projeto
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                   </a>
@@ -106,7 +108,7 @@ export function Projects() {
           {/* CTA */}
           <div className="text-center mt-12">
             <Button variant="glass" size="lg" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/go830305-cripto" target="_blank" rel="noopener noreferrer">
                 Ver mais no GitHub
                 <ArrowUpRight className="h-4 w-4" />
               </a>
