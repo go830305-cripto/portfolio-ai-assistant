@@ -1,4 +1,4 @@
-import { Github, Linkedin, MapPin, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -12,9 +12,14 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Open email client with pre-filled data
+    const subject = encodeURIComponent(`Contato do Portfólio - ${formData.name}`);
+    const body = encodeURIComponent(`Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`);
+    window.open(`mailto:go830305@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    
     toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado pelo contato. Retornarei em breve!",
+      title: "Redirecionando para o email...",
+      description: "Complete o envio no seu cliente de email.",
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -50,6 +55,41 @@ export function Contact() {
                 </h3>
                 
                 <div className="space-y-6">
+                  {/* Email */}
+                  <a 
+                    href="mailto:go830305@gmail.com"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Email</p>
+                      <p className="text-foreground group-hover:text-primary transition-colors">
+                        go830305@gmail.com
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* WhatsApp */}
+                  <a 
+                    href="https://wa.me/5551992652959"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 group-hover:from-secondary/30 group-hover:to-primary/30 transition-colors">
+                      <MessageCircle className="h-5 w-5 text-secondary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">WhatsApp</p>
+                      <p className="text-foreground group-hover:text-secondary transition-colors">
+                        +55 51 99265-2959
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* LinkedIn */}
                   <a 
                     href="https://www.linkedin.com/in/gabriel-oliveira-475040332/"
                     target="_blank"
@@ -67,6 +107,7 @@ export function Contact() {
                     </div>
                   </a>
 
+                  {/* GitHub */}
                   <a 
                     href="https://github.com/go830305-cripto"
                     target="_blank"
@@ -84,6 +125,7 @@ export function Contact() {
                     </div>
                   </a>
 
+                  {/* Location */}
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20">
                       <MapPin className="h-5 w-5 text-primary" />
@@ -95,26 +137,20 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground mb-4">Links rápidos</p>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/go830305-cripto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-muted"
-                    >
-                      <Github className="h-5 w-5" />
+                {/* Quick Actions */}
+                <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row gap-3">
+                  <Button variant="hero" size="lg" className="flex-1" asChild>
+                    <a href="https://wa.me/5551992652959" target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp
                     </a>
-                    <a
-                      href="https://www.linkedin.com/in/gabriel-oliveira-475040332/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-muted"
-                    >
-                      <Linkedin className="h-5 w-5" />
+                  </Button>
+                  <Button variant="glass" size="lg" className="flex-1" asChild>
+                    <a href="mailto:go830305@gmail.com">
+                      <Mail className="h-4 w-4" />
+                      Email
                     </a>
-                  </div>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -172,7 +208,7 @@ export function Contact() {
                 </div>
 
                 <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Enviar Mensagem
+                  Enviar por Email
                   <Send className="h-4 w-4" />
                 </Button>
               </div>
