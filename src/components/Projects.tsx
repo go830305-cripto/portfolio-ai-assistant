@@ -60,11 +60,11 @@ export function Projects() {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="group glass-card-hover p-8 flex flex-col"
+                className="group card-3d p-8 flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
-                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} shadow-lg`}>
+                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} shadow-lg shadow-primary/20`}>
                   <project.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
 
@@ -87,7 +87,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                      className="inline-flex items-center rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground border border-border/30"
                     >
                       {tag}
                     </span>
@@ -95,7 +95,7 @@ export function Projects() {
                 </div>
 
                 {/* Link */}
-                <Button variant="ghost" className="w-fit group/btn" asChild>
+                <Button variant="ghost" className="w-fit group/btn btn-3d bg-primary/10 hover:bg-primary/20" asChild>
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
                     Ver Projeto
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
@@ -107,7 +107,7 @@ export function Projects() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <Button variant="glass" size="lg" asChild>
+            <Button variant="glass" size="lg" className="btn-3d" asChild>
               <a href="https://github.com/go830305-cripto" target="_blank" rel="noopener noreferrer">
                 Ver mais no GitHub
                 <ArrowUpRight className="h-4 w-4" />
