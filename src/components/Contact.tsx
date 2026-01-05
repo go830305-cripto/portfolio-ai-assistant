@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Github, Linkedin, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -22,8 +22,9 @@ export function Contact() {
   return (
     <section id="contato" className="relative py-24 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container relative z-10 px-4">
         <div className="max-w-6xl mx-auto">
@@ -45,49 +46,71 @@ export function Contact() {
             <div className="space-y-8">
               <div className="glass-card p-8">
                 <h3 className="text-xl font-bold text-foreground mb-6">
-                  Informações de Contato
+                  Conecte-se Comigo
                 </h3>
                 
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-accent/20">
-                      <Mail className="h-5 w-5 text-primary" />
+                  <a 
+                    href="https://www.linkedin.com/in/gabriel-oliveira-475040332/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                      <Linkedin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Email</p>
-                      <a href="mailto:email@exemplo.com" className="text-foreground hover:text-primary transition-colors">
-                        email@exemplo.com
-                      </a>
+                      <p className="text-sm text-muted-foreground">LinkedIn</p>
+                      <p className="text-foreground group-hover:text-primary transition-colors">
+                        Gabriel Oliveira
+                      </p>
                     </div>
-                  </div>
+                  </a>
+
+                  <a 
+                    href="https://github.com/go830305-cripto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                      <Github className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">GitHub</p>
+                      <p className="text-foreground group-hover:text-primary transition-colors">
+                        go830305-cripto
+                      </p>
+                    </div>
+                  </a>
 
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-accent/20">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Localização</p>
-                      <p className="text-foreground">Brasil • Remoto</p>
+                      <p className="text-foreground">Brasil • Disponível Remoto</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground mb-4">Conecte-se comigo</p>
+                  <p className="text-sm text-muted-foreground mb-4">Links rápidos</p>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com"
+                      href="https://github.com/go830305-cripto"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-secondary/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-secondary"
+                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-muted"
                     >
                       <Github className="h-5 w-5" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/gabriel-oliveira-475040332/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-secondary/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-secondary"
+                      className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/50 bg-muted/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-muted"
                     >
                       <Linkedin className="h-5 w-5" />
                     </a>
