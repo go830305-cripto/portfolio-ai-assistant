@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowDown, Github, Linkedin, ExternalLink, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -40,7 +40,7 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up [animation-delay:0.2s]">
+          <div className="flex flex-wrap gap-3 justify-center mb-12 animate-slide-up [animation-delay:0.2s]">
             <Button variant="hero" size="xl" asChild>
               <a href="#projetos">Ver Projetos</a>
             </Button>
@@ -54,6 +54,12 @@ export function Hero() {
               <a href="https://www.linkedin.com/in/gabriel-oliveira-475040332/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 LinkedIn
+              </a>
+            </Button>
+            <Button variant="glass" size="xl" className="bg-secondary/20 border-secondary/30 hover:bg-secondary/30" asChild>
+              <a href="https://wa.me/5551992652959" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+                Fale Comigo
               </a>
             </Button>
           </div>
