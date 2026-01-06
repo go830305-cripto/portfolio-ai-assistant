@@ -1,5 +1,6 @@
 import { ArrowUpRight, BarChart3, Bot, Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollReveal, useScrollRevealMultiple } from "@/hooks/useScrollReveal";
 
 const projects = [
   {
@@ -32,6 +33,10 @@ const projects = [
 ];
 
 export function Projects() {
+  const headerReveal = useScrollReveal();
+  const ctaReveal = useScrollReveal();
+  const { setRef: setProjectRef, visibleItems: projectsVisible } = useScrollRevealMultiple(projects.length);
+
   return (
     <section id="projetos" className="relative py-24 overflow-hidden">
       {/* Background */}
@@ -43,7 +48,10 @@ export function Projects() {
       <div className="container relative z-10 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div 
+            ref={headerReveal.ref}
+            className={`text-center mb-16 scroll-reveal ${headerReveal.isVisible ? 'visible' : ''}`}
+          >
             <span className="inline-block text-sm font-medium text-primary mb-4 tracking-wider uppercase">
               Portfólio
             </span>
@@ -60,8 +68,8 @@ export function Projects() {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="group card-3d p-8 flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                ref={setProjectRef(index)}
+                className={`group card-3d p-8 flex flex-col scroll-reveal-scale scroll-reveal-delay-${index + 1} ${projectsVisible[index] ? 'visible' : ''}`}
               >
                 {/* Icon */}
                 <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} icon-3d`}>
@@ -106,7 +114,10 @@ export function Projects() {
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-12">
+          <div 
+            ref={ctaReveal.ref}
+            className={`text-center mt-12 scroll-reveal ${ctaReveal.isVisible ? 'visible' : ''}`}
+          >
             <Button variant="glass" size="lg" className="btn-3d" asChild>
               <a href="https://github.com/go830305-cripto" target="_blank" rel="noopener noreferrer">
                 Ver mais no GitHub

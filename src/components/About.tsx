@@ -1,4 +1,5 @@
 import { BarChart3, Bot, Brain, Code2, Database, LineChart } from "lucide-react";
+import { useScrollReveal, useScrollRevealMultiple } from "@/hooks/useScrollReveal";
 
 const skills = [
   { icon: Code2, name: "Python", description: "Pandas, Matplotlib, Plotly" },
@@ -10,6 +11,12 @@ const skills = [
 ];
 
 export function About() {
+  const headerReveal = useScrollReveal();
+  const contentLeftReveal = useScrollReveal();
+  const contentRightReveal = useScrollReveal();
+  const skillsTitleReveal = useScrollReveal();
+  const { setRef: setSkillRef, visibleItems: skillsVisible } = useScrollRevealMultiple(skills.length);
+
   return (
     <section id="sobre" className="relative py-24 overflow-hidden">
       {/* Background */}
@@ -18,7 +25,10 @@ export function About() {
       <div className="container relative z-10 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div 
+            ref={headerReveal.ref}
+            className={`text-center mb-16 scroll-reveal ${headerReveal.isVisible ? 'visible' : ''}`}
+          >
             <span className="inline-block text-sm font-medium text-primary mb-4 tracking-wider uppercase">
               Sobre Mim
             </span>
@@ -33,7 +43,10 @@ export function About() {
           {/* Content Grid */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             {/* Text Content */}
-            <div className="space-y-6">
+            <div 
+              ref={contentLeftReveal.ref}
+              className={`space-y-6 scroll-reveal-left ${contentLeftReveal.isVisible ? 'visible' : ''}`}
+            >
               <p className="text-foreground text-lg leading-relaxed">
                 Profissional focado em <span className="text-primary font-medium">análise de dados, visualização e construção de soluções orientadas a dados</span>.
               </p>
@@ -49,7 +62,10 @@ export function About() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            <div 
+              ref={contentRightReveal.ref}
+              className={`grid grid-cols-2 gap-4 scroll-reveal-right ${contentRightReveal.isVisible ? 'visible' : ''}`}
+            >
               <div className="stat-3d p-6 text-center">
                 <div className="text-4xl font-bold gradient-text mb-2">10+</div>
                 <div className="text-muted-foreground text-sm">Projetos de Dados</div>
@@ -71,15 +87,18 @@ export function About() {
 
           {/* Skills Grid */}
           <div>
-            <h3 className="text-2xl font-bold text-center mb-10">
+            <h3 
+              ref={skillsTitleReveal.ref}
+              className={`text-2xl font-bold text-center mb-10 scroll-reveal ${skillsTitleReveal.isVisible ? 'visible' : ''}`}
+            >
               Tecnologias & Ferramentas
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {skills.map((skill, index) => (
                 <div
                   key={skill.name}
-                  className="card-3d p-6 flex items-start gap-4"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  ref={setSkillRef(index)}
+                  className={`card-3d p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delay-${Math.min(index + 1, 5)} ${skillsVisible[index] ? 'visible' : ''}`}
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 icon-3d">
                     <skill.icon className="h-6 w-6 text-primary" />
