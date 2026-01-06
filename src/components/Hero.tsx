@@ -79,7 +79,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="card-3d p-5 flex items-center gap-4 group"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-secondary shadow-lg shadow-primary/20">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-secondary icon-3d">
                 <ExternalLink className="h-5 w-5 text-primary-foreground" />
               </div>
               <div className="text-left">
@@ -93,7 +93,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="card-3d p-5 flex items-center gap-4 group"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-accent to-primary shadow-lg shadow-accent/20">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-accent to-primary icon-3d">
                 <ExternalLink className="h-5 w-5 text-accent-foreground" />
               </div>
               <div className="text-left">

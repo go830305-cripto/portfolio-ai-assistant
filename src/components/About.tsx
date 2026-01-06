@@ -50,19 +50,19 @@ export function About() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="glass-card p-6 text-center">
+              <div className="stat-3d p-6 text-center">
                 <div className="text-4xl font-bold gradient-text mb-2">10+</div>
                 <div className="text-muted-foreground text-sm">Projetos de Dados</div>
               </div>
-              <div className="glass-card p-6 text-center">
+              <div className="stat-3d p-6 text-center">
                 <div className="text-4xl font-bold gradient-text mb-2">5+</div>
                 <div className="text-muted-foreground text-sm">Dashboards Criados</div>
               </div>
-              <div className="glass-card p-6 text-center">
+              <div className="stat-3d p-6 text-center">
                 <div className="text-4xl font-bold text-secondary mb-2">2+</div>
                 <div className="text-muted-foreground text-sm">Apps com IA</div>
               </div>
-              <div className="glass-card p-6 text-center">
+              <div className="stat-3d p-6 text-center">
                 <div className="text-4xl font-bold text-accent mb-2">100%</div>
                 <div className="text-muted-foreground text-sm">Foco em Resultados</div>
               </div>
@@ -78,10 +78,10 @@ export function About() {
               {skills.map((skill, index) => (
                 <div
                   key={skill.name}
-                  className="glass-card-hover p-6 flex items-start gap-4"
+                  className="card-3d p-6 flex items-start gap-4"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 icon-3d">
                     <skill.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
