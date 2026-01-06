@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, MapPin, MessageCircle, Send } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,9 +11,12 @@ export function Contact() {
     message: "",
   });
 
+  const headerReveal = useScrollReveal();
+  const leftReveal = useScrollReveal();
+  const rightReveal = useScrollReveal<HTMLFormElement>();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Open email client with pre-filled data
     const subject = encodeURIComponent(`Contato do Portfólio - ${formData.name}`);
     const body = encodeURIComponent(`Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`);
     window.open(`mailto:go830305@gmail.com?subject=${subject}&body=${body}`, '_blank');
@@ -34,7 +38,10 @@ export function Contact() {
       <div className="container relative z-10 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div 
+            ref={headerReveal.ref}
+            className={`text-center mb-16 scroll-reveal ${headerReveal.isVisible ? 'visible' : ''}`}
+          >
             <span className="inline-block text-sm font-medium text-primary mb-4 tracking-wider uppercase">
               Contato
             </span>
@@ -48,7 +55,10 @@ export function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div 
+              ref={leftReveal.ref}
+              className={`space-y-8 scroll-reveal-left ${leftReveal.isVisible ? 'visible' : ''}`}
+            >
               <div className="card-3d p-8">
                 <h3 className="text-xl font-bold text-foreground mb-6">
                   Conecte-se Comigo
@@ -60,7 +70,7 @@ export function Contact() {
                     href="mailto:go830305@gmail.com"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors icon-3d">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -78,7 +88,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 group-hover:from-secondary/30 group-hover:to-primary/30 transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-secondary/20 to-primary/20 group-hover:from-secondary/30 group-hover:to-primary/30 transition-colors icon-3d">
                       <MessageCircle className="h-5 w-5 text-secondary" />
                     </div>
                     <div>
@@ -96,7 +106,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors icon-3d">
                       <Linkedin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -114,7 +124,7 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors icon-3d">
                       <Github className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -127,7 +137,7 @@ export function Contact() {
 
                   {/* Location */}
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 icon-3d">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -139,13 +149,13 @@ export function Contact() {
 
                 {/* Quick Actions */}
                 <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row gap-3">
-                  <Button variant="hero" size="lg" className="flex-1" asChild>
+                  <Button variant="hero" size="lg" className="flex-1 btn-3d" asChild>
                     <a href="https://wa.me/5551992652959" target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="h-4 w-4" />
                       WhatsApp
                     </a>
                   </Button>
-                  <Button variant="glass" size="lg" className="flex-1" asChild>
+                  <Button variant="glass" size="lg" className="flex-1 btn-3d" asChild>
                     <a href="mailto:go830305@gmail.com">
                       <Mail className="h-4 w-4" />
                       Email
@@ -156,7 +166,11 @@ export function Contact() {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="card-3d p-8">
+            <form 
+              onSubmit={handleSubmit} 
+              ref={rightReveal.ref}
+              className={`card-3d p-8 scroll-reveal-right ${rightReveal.isVisible ? 'visible' : ''}`}
+            >
               <h3 className="text-xl font-bold text-foreground mb-6">
                 Envie uma Mensagem
               </h3>
@@ -207,7 +221,7 @@ export function Contact() {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
+                <Button type="submit" variant="hero" size="lg" className="w-full btn-3d">
                   Enviar por Email
                   <Send className="h-4 w-4" />
                 </Button>
