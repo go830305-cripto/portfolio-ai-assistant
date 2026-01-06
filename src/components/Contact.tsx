@@ -49,7 +49,7 @@ export function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="glass-card p-8">
+              <div className="card-3d p-8">
                 <h3 className="text-xl font-bold text-foreground mb-6">
                   Conecte-se Comigo
                 </h3>
@@ -156,7 +156,7 @@ export function Contact() {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="glass-card p-8">
+            <form onSubmit={handleSubmit} className="card-3d p-8">
               <h3 className="text-xl font-bold text-foreground mb-6">
                 Envie uma Mensagem
               </h3>

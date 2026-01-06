@@ -64,7 +64,7 @@ export function Projects() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
-                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} shadow-lg shadow-primary/20`}>
+                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} icon-3d`}>
                   <project.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
 
