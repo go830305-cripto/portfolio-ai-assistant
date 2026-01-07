@@ -18,7 +18,7 @@ export function Hero() {
       <div className="geometric-3d w-16 h-16 top-1/2 left-10 opacity-10" style={{ animationDuration: '20s' }} />
       
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--foreground)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground)/0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -79,8 +79,8 @@ export function Hero() {
               rel="noopener noreferrer"
               className="card-3d p-5 flex items-center gap-4 group"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary to-secondary icon-3d">
-                <ExternalLink className="h-5 w-5 text-primary-foreground" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-foreground icon-3d">
+                <ExternalLink className="h-5 w-5 text-background" />
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">Dashboard de Dados</h3>
@@ -93,8 +93,8 @@ export function Hero() {
               rel="noopener noreferrer"
               className="card-3d p-5 flex items-center gap-4 group"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-accent to-primary icon-3d">
-                <ExternalLink className="h-5 w-5 text-accent-foreground" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted-foreground icon-3d">
+                <ExternalLink className="h-5 w-5 text-background" />
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">Chatbot Analítico</h3>
