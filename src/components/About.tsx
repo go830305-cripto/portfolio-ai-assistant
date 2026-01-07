@@ -56,7 +56,7 @@ export function About() {
                 que não apenas respondem perguntas, mas antecipam necessidades.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Interesse em transformar <span className="text-secondary font-medium">dados complexos em decisões claras</span>, 
+                Interesse em transformar <span className="text-foreground font-medium">dados complexos em decisões claras</span>, 
                 desenvolvendo desde análises exploratórias até produtos funcionais com inteligência artificial.
               </p>
             </div>
@@ -75,11 +75,11 @@ export function About() {
                 <div className="text-muted-foreground text-sm">Dashboards Criados</div>
               </div>
               <div className="stat-3d p-6 text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">2+</div>
+                <div className="text-4xl font-bold text-foreground mb-2">2+</div>
                 <div className="text-muted-foreground text-sm">Apps com IA</div>
               </div>
               <div className="stat-3d p-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-2">100%</div>
+                <div className="text-4xl font-bold text-foreground mb-2">100%</div>
                 <div className="text-muted-foreground text-sm">Foco em Resultados</div>
               </div>
             </div>
@@ -100,8 +100,8 @@ export function About() {
                   ref={setSkillRef(index)}
                   className={`card-3d p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delay-${Math.min(index + 1, 5)} ${skillsVisible[index] ? 'visible' : ''}`}
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 icon-3d">
-                    <skill.icon className="h-6 w-6 text-primary" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted border border-border icon-3d">
+                    <skill.icon className="h-6 w-6 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">{skill.name}</h4>

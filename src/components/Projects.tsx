@@ -8,7 +8,7 @@ const projects = [
     title: "Chatbot Analista de Planilhas",
     description: "Aplicação web com chatbot inteligente que analisa planilhas e responde perguntas em linguagem natural. Automação de análise de dados focada em experiência do usuário.",
     tags: ["Python", "NLP", "IA", "UX"],
-    color: "from-accent to-primary",
+    color: "bg-foreground",
     link: "https://plani-bot-magic.vercel.app/",
     highlight: "Automação de análise de dados",
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Dashboard de Análise de Dados",
     description: "Dashboard interativo com dados tratados, métricas e visualizações para tomada de decisão. KPIs claros e insights acionáveis para gestão estratégica.",
     tags: ["Dashboard", "Métricas", "KPIs", "Visualização"],
-    color: "from-primary to-secondary",
+    color: "bg-muted-foreground",
     link: "https://call-stats-board.lovable.app",
     highlight: "Insights acionáveis",
   },
@@ -26,7 +26,7 @@ const projects = [
     title: "Repositórios e Projetos de Dados",
     description: "Coleção de projetos de análise de dados, exploração de dados (EDA), modelos de machine learning básico e visualizações em Python.",
     tags: ["Python", "Pandas", "ML", "EDA"],
-    color: "from-secondary to-accent",
+    color: "bg-foreground",
     link: "https://github.com/go830305-cripto",
     highlight: "Machine Learning & EDA",
   },
@@ -72,12 +72,12 @@ export function Projects() {
                 className={`group card-3d p-8 flex flex-col scroll-reveal-scale scroll-reveal-delay-${index + 1} ${projectsVisible[index] ? 'visible' : ''}`}
               >
                 {/* Icon */}
-                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r ${project.color} icon-3d`}>
-                  <project.icon className="h-7 w-7 text-primary-foreground" />
+                <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl ${project.color} icon-3d`}>
+                  <project.icon className="h-7 w-7 text-background" />
                 </div>
 
                 {/* Highlight Badge */}
-                <span className="inline-flex w-fit items-center rounded-full bg-accent/10 border border-accent/30 px-3 py-1 text-xs font-medium text-accent mb-4">
+                <span className="inline-flex w-fit items-center rounded-full bg-muted border border-border px-3 py-1 text-xs font-medium text-foreground mb-4">
                   <Sparkles className="h-3 w-3 mr-1" />
                   {project.highlight}
                 </span>
@@ -103,7 +103,7 @@ export function Projects() {
                 </div>
 
                 {/* Link */}
-                <Button variant="ghost" className="w-fit group/btn btn-3d bg-primary/10 hover:bg-primary/20" asChild>
+                <Button variant="ghost" className="w-fit group/btn btn-3d bg-muted hover:bg-muted/80 border border-border" asChild>
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
                     Ver Projeto
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
