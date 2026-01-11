@@ -24,7 +24,7 @@ export function Footer() {
                 href="https://github.com/go830305-cripto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-card"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-github/30 bg-github/10 text-github transition-all hover:bg-github/20 hover:border-github/50"
                 aria-label="GitHub"
               >
                 <Github className="h-4 w-4" />
@@ -33,7 +33,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/gabriel-oliveira-475040332/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-card/50 text-muted-foreground transition-all hover:border-primary/50 hover:text-primary hover:bg-card"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-linkedin/30 bg-linkedin/10 text-linkedin transition-all hover:bg-linkedin/20 hover:border-linkedin/50"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />

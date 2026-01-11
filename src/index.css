@@ -60,6 +60,24 @@
     --sidebar-accent-foreground: 0 0% 7%;
     --sidebar-border: 0 0% 82%;
     --sidebar-ring: 0 0% 7%;
+
+    /* Brand Colors - Official */
+    --whatsapp: 142 70% 45%;
+    --linkedin: 201 100% 35%;
+    --github: 0 0% 15%;
+    --gmail: 4 90% 58%;
+    
+    /* Technology Colors - Official */
+    --python-blue: 210 67% 43%;
+    --python-yellow: 48 89% 50%;
+    --pandas: 240 60% 50%;
+    --matplotlib: 210 80% 45%;
+    --plotly: 215 70% 35%;
+    --sql: 195 80% 45%;
+    --powerbi: 45 100% 50%;
+    --github-tech: 0 0% 20%;
+    --chatbot: 250 60% 55%;
+    --ml: 280 60% 50%;
   }
 
   .dark {
@@ -112,6 +130,24 @@
     --sidebar-accent-foreground: 0 0% 96%;
     --sidebar-border: 0 0% 18%;
     --sidebar-ring: 0 0% 96%;
+
+    /* Brand Colors - Official (same, good contrast on dark) */
+    --whatsapp: 142 70% 45%;
+    --linkedin: 201 100% 45%;
+    --github: 0 0% 75%;
+    --gmail: 4 90% 58%;
+    
+    /* Technology Colors - Official */
+    --python-blue: 210 67% 50%;
+    --python-yellow: 48 89% 55%;
+    --pandas: 240 55% 60%;
+    --matplotlib: 210 75% 55%;
+    --plotly: 215 65% 50%;
+    --sql: 195 75% 55%;
+    --powerbi: 45 100% 55%;
+    --github-tech: 0 0% 70%;
+    --chatbot: 250 55% 65%;
+    --ml: 280 55% 60%;
   }
 }
 
