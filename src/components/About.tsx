@@ -1,13 +1,65 @@
 import { BarChart3, Bot, Brain, Code2, Database, LineChart } from "lucide-react";
 import { useScrollReveal, useScrollRevealMultiple } from "@/hooks/useScrollReveal";
+import type { LucideIcon } from "lucide-react";
 
-const skills = [
-  { icon: Code2, name: "Python", description: "Pandas, Matplotlib, Plotly" },
-  { icon: Database, name: "SQL", description: "Consultas e análise de dados" },
-  { icon: BarChart3, name: "Power BI / Dashboards", description: "Visualizações interativas" },
-  { icon: LineChart, name: "GitHub", description: "Versionamento e colaboração" },
-  { icon: Bot, name: "Chatbot e IA", description: "Aplicações inteligentes" },
-  { icon: Brain, name: "Machine Learning", description: "Análise exploratória e modelos" },
+interface Skill {
+  icon: LucideIcon;
+  name: string;
+  description: string;
+  colorClass: string;
+  bgClass: string;
+  borderClass: string;
+}
+
+const skills: Skill[] = [
+  { 
+    icon: Code2, 
+    name: "Python", 
+    description: "Pandas, Matplotlib, Plotly",
+    colorClass: "text-python-blue",
+    bgClass: "bg-python-blue/10",
+    borderClass: "border-python-blue/30"
+  },
+  { 
+    icon: Database, 
+    name: "SQL", 
+    description: "Consultas e análise de dados",
+    colorClass: "text-sql",
+    bgClass: "bg-sql/10",
+    borderClass: "border-sql/30"
+  },
+  { 
+    icon: BarChart3, 
+    name: "Power BI / Dashboards", 
+    description: "Visualizações interativas",
+    colorClass: "text-powerbi",
+    bgClass: "bg-powerbi/10",
+    borderClass: "border-powerbi/30"
+  },
+  { 
+    icon: LineChart, 
+    name: "GitHub", 
+    description: "Versionamento e colaboração",
+    colorClass: "text-github-tech",
+    bgClass: "bg-github-tech/10",
+    borderClass: "border-github-tech/30"
+  },
+  { 
+    icon: Bot, 
+    name: "Chatbot e IA", 
+    description: "Aplicações inteligentes",
+    colorClass: "text-chatbot",
+    bgClass: "bg-chatbot/10",
+    borderClass: "border-chatbot/30"
+  },
+  { 
+    icon: Brain, 
+    name: "Machine Learning", 
+    description: "Análise exploratória e modelos",
+    colorClass: "text-ml",
+    bgClass: "bg-ml/10",
+    borderClass: "border-ml/30"
+  },
 ];
 
 export function About() {
@@ -100,11 +152,11 @@ export function About() {
                   ref={setSkillRef(index)}
                   className={`card-3d p-6 flex items-start gap-4 scroll-reveal-scale scroll-reveal-delay-${Math.min(index + 1, 5)} ${skillsVisible[index] ? 'visible' : ''}`}
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted border border-border icon-3d">
-                    <skill.icon className="h-6 w-6 text-foreground" />
+                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${skill.bgClass} border ${skill.borderClass} icon-3d`}>
+                    <skill.icon className={`h-6 w-6 ${skill.colorClass}`} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">{skill.name}</h4>
+                    <h4 className={`font-semibold mb-1 ${skill.colorClass}`}>{skill.name}</h4>
                     <p className="text-sm text-muted-foreground">{skill.description}</p>
                   </div>
                 </div>

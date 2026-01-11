@@ -70,12 +70,12 @@ export function Contact() {
                     href="mailto:go830305@gmail.com"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted border border-border group-hover:bg-foreground/10 transition-colors icon-3d">
-                      <Mail className="h-5 w-5 text-foreground" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gmail/10 border border-gmail/30 group-hover:bg-gmail/20 transition-colors icon-3d">
+                      <Mail className="h-5 w-5 text-gmail" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="text-foreground group-hover:text-muted-foreground transition-colors">
+                      <p className="text-foreground group-hover:text-gmail transition-colors">
                         go830305@gmail.com
                       </p>
                     </div>
@@ -88,12 +88,12 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted border border-border group-hover:bg-foreground/10 transition-colors icon-3d">
-                      <MessageCircle className="h-5 w-5 text-foreground" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-whatsapp/10 border border-whatsapp/30 group-hover:bg-whatsapp/20 transition-colors icon-3d">
+                      <MessageCircle className="h-5 w-5 text-whatsapp" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">WhatsApp</p>
-                      <p className="text-foreground group-hover:text-muted-foreground transition-colors">
+                      <p className="text-foreground group-hover:text-whatsapp transition-colors">
                         +55 51 99265-2959
                       </p>
                     </div>
@@ -106,12 +106,12 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted border border-border group-hover:bg-foreground/10 transition-colors icon-3d">
-                      <Linkedin className="h-5 w-5 text-foreground" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linkedin/10 border border-linkedin/30 group-hover:bg-linkedin/20 transition-colors icon-3d">
+                      <Linkedin className="h-5 w-5 text-linkedin" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">LinkedIn</p>
-                      <p className="text-foreground group-hover:text-muted-foreground transition-colors">
+                      <p className="text-foreground group-hover:text-linkedin transition-colors">
                         Gabriel Oliveira
                       </p>
                     </div>
@@ -124,12 +124,12 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted border border-border group-hover:bg-foreground/10 transition-colors icon-3d">
-                      <Github className="h-5 w-5 text-foreground" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-github/10 border border-github/30 group-hover:bg-github/20 transition-colors icon-3d">
+                      <Github className="h-5 w-5 text-github" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">GitHub</p>
-                      <p className="text-foreground group-hover:text-muted-foreground transition-colors">
+                      <p className="text-foreground group-hover:text-github transition-colors">
                         go830305-cripto
                       </p>
                     </div>
@@ -149,13 +149,13 @@ export function Contact() {
 
                 {/* Quick Actions */}
                 <div className="mt-8 pt-8 border-t border-border/50 flex flex-col sm:flex-row gap-3">
-                  <Button variant="hero" size="lg" className="flex-1 btn-3d" asChild>
+                  <Button size="lg" className="flex-1 btn-3d bg-whatsapp hover:bg-whatsapp/90 text-white" asChild>
                     <a href="https://wa.me/5551992652959" target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="h-4 w-4" />
                       WhatsApp
                     </a>
                   </Button>
-                  <Button variant="glass" size="lg" className="flex-1 btn-3d" asChild>
+                  <Button size="lg" className="flex-1 btn-3d bg-gmail hover:bg-gmail/90 text-white" asChild>
                     <a href="mailto:go830305@gmail.com">
                       <Mail className="h-4 w-4" />
                       Email

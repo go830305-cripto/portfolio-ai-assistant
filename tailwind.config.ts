@@ -61,6 +61,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        /* Brand Colors */
+        whatsapp: "hsl(var(--whatsapp))",
+        linkedin: "hsl(var(--linkedin))",
+        github: "hsl(var(--github))",
+        gmail: "hsl(var(--gmail))",
+        /* Technology Colors */
+        "python-blue": "hsl(var(--python-blue))",
+        "python-yellow": "hsl(var(--python-yellow))",
+        pandas: "hsl(var(--pandas))",
+        matplotlib: "hsl(var(--matplotlib))",
+        plotly: "hsl(var(--plotly))",
+        sql: "hsl(var(--sql))",
+        powerbi: "hsl(var(--powerbi))",
+        "github-tech": "hsl(var(--github-tech))",
+        chatbot: "hsl(var(--chatbot))",
+        ml: "hsl(var(--ml))",
       },
       borderRadius: {
         lg: "var(--radius)",
