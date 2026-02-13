@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# Data Hero Guide – AI Data App
 
-## Project info
+Aplicação criada com foco em transformar projetos de análise de dados e machine learning em produtos utilizáveis, utilizando inteligência artificial e abordagem orientada a dados.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+O projeto demonstra como ideias baseadas em datasets podem evoluir para aplicações interativas, com visualização clara de insights e experiência centrada no usuário.
 
-## How can I edit this code?
+## Objetivo
 
-There are several ways of editing your application.
+Este projeto tem como finalidade:
 
-**Use Lovable**
+* Transformar análises de dados em aplicações reais
+* Demonstrar capacidade de criação de produtos orientados por dados
+* Aplicar conceitos de IA, analytics e visualização
+* Servir como case de portfólio profissional em dados e tecnologia
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Acesse a aplicação
 
-Changes made via Lovable will be committed automatically to this repo.
+https://data-hero-guide.lovable.app/
 
-**Use your preferred IDE**
+## Tecnologias e conceitos utilizados
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* Inteligência Artificial aplicada a dados
+* Data analytics e visualização
+* Estruturação de aplicações orientadas a datasets
+* Criação de interfaces com foco em experiência do usuário
+* Prototipagem e product thinking
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## O que o projeto demonstra
 
-Follow these steps:
+* Capacidade analítica para transformar dados em soluções
+* Organização e estruturação de informação
+* Visão de produto aplicada a projetos de dados
+* Aplicação prática de IA fora do ambiente acadêmico
+* Criação de soluções voltadas para uso real
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Possíveis evoluções
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Integração com APIs de dados em tempo real
+* Inclusão de dashboards dinâmicos
+* Deploy de novos modelos preditivos
+* Transformação em produto escalável
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Autor
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Gabriel Oliveira
 
-**Edit a file directly in GitHub**
+LinkedIn: https://www.linkedin.com/in/gabriel-oliveira-475040332/
+GitHub: https://github.com/go830305-cripto
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Projeto desenvolvido como parte da construção de portfólio profissional em Ciência de Dados, Inteligência Artificial e Analytics.
