@@ -1,4 +1,4 @@
-# Data Hero Guide – Portfólio de Projetos em Dados e Inteligência Artificial
+Portfólio de Projetos em Dados e Inteligência Artificial
 
 Este projeto é um site de portfólio profissional desenvolvido para apresentar aplicações, estudos e soluções nas áreas de análise de dados, machine learning e inteligência artificial.
 
