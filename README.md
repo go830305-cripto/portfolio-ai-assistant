@@ -1,44 +1,49 @@
-# Data Hero Guide – AI Data App
+# Data Hero Guide – Portfólio de Projetos em Dados e Inteligência Artificial
 
-Aplicação criada com foco em transformar projetos de análise de dados e machine learning em produtos utilizáveis, utilizando inteligência artificial e abordagem orientada a dados.
+Este projeto é um site de portfólio profissional desenvolvido para apresentar aplicações, estudos e soluções nas áreas de análise de dados, machine learning e inteligência artificial.
 
-O projeto demonstra como ideias baseadas em datasets podem evoluir para aplicações interativas, com visualização clara de insights e experiência centrada no usuário.
+A proposta central é demonstrar, de forma prática e visual, a capacidade de transformar dados em produtos, insights e experiências digitais.
 
-## Objetivo
+## Objetivo do projeto
 
-Este projeto tem como finalidade:
+Este site foi criado como um portfólio técnico para:
 
-* Transformar análises de dados em aplicações reais
-* Demonstrar capacidade de criação de produtos orientados por dados
-* Aplicar conceitos de IA, analytics e visualização
-* Servir como case de portfólio profissional em dados e tecnologia
+* Expor projetos de análise de dados e machine learning
+* Demonstrar habilidades em construção de soluções orientadas por dados
+* Apresentar aplicações baseadas em IA
+* Consolidar experiências e estudos em ciência de dados
+* Servir como vitrine profissional para oportunidades na área de tecnologia e dados
 
-## Acesse a aplicação
+## Acesse o portfólio
 
 https://data-hero-guide.lovable.app/
 
-## Tecnologias e conceitos utilizados
+## O que você encontrará no site
 
-* Inteligência Artificial aplicada a dados
-* Data analytics e visualização
-* Estruturação de aplicações orientadas a datasets
-* Criação de interfaces com foco em experiência do usuário
-* Prototipagem e product thinking
+* Projetos aplicados de data analytics
+* Aplicações com inteligência artificial
+* Estruturação de soluções baseadas em datasets
+* Interfaces pensadas para visualização de insights
+* Demonstrações práticas de uso de dados em produtos digitais
 
-## O que o projeto demonstra
+## Stack e conceitos trabalhados
 
-* Capacidade analítica para transformar dados em soluções
-* Organização e estruturação de informação
-* Visão de produto aplicada a projetos de dados
-* Aplicação prática de IA fora do ambiente acadêmico
-* Criação de soluções voltadas para uso real
+* Data Analytics
+* Machine Learning
+* Inteligência Artificial aplicada
+* Visualização de dados
+* Estruturação de produtos orientados por dados
+* Experiência do usuário aplicada a soluções analíticas
 
-## Possíveis evoluções
+## Proposta profissional
 
-* Integração com APIs de dados em tempo real
-* Inclusão de dashboards dinâmicos
-* Deploy de novos modelos preditivos
-* Transformação em produto escalável
+Este portfólio representa:
+
+* Capacidade de transformar dados em soluções práticas
+* Organização de projetos técnicos
+* Visão de produto aplicada a dados
+* Aplicação real de IA fora do ambiente acadêmico
+* Preparação para atuação profissional em dados, analytics e tecnologia
 
 ## Autor
 
@@ -47,6 +52,4 @@ Gabriel Oliveira
 LinkedIn: https://www.linkedin.com/in/gabriel-oliveira-475040332/
 GitHub: https://github.com/go830305-cripto
 
----
-
-Projeto desenvolvido como parte da construção de portfólio profissional em Ciência de Dados, Inteligência Artificial e Analytics.
+Projeto desenvolvido como portfólio profissional para oportunidades em Ciência de Dados, Inteligência Artificial e Análise de Dados.
